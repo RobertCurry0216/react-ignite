@@ -21,6 +21,11 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
   }
 
+  input{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+
   h2{
     font-size: 3rem;
     font-family: 'Abril Fatface', cursive;
