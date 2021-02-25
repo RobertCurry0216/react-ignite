@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { loadGames } from "../actions/gamesAction";
 
 //styling and animation
@@ -8,8 +9,13 @@ import { motion } from "framer-motion";
 
 //componants
 import Game from "../componants/Game";
+import GameDetail from "../componants/GameDetail";
 
 export default function Home() {
+  //get current location
+  const location = useLocation();
+  const pathId = location.pathname.split("/")[2];
+
   // fetch game data
   const dispatch = useDispatch();
   useEffect(() => {
@@ -20,6 +26,7 @@ export default function Home() {
 
   return (
     <GameList>
+      {pathId && <GameDetail />}
       <h1>Home</h1>
       <h2>Popular</h2>
       <Games>
@@ -71,7 +78,7 @@ const GameList = styled(motion.div)`
 const Games = styled(motion.div)`
   min-height: 80vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 3rem;
 `;

@@ -31,3 +31,10 @@ const new_games = `games?dates=${lastYearDate},${currentDate}&ordering=-released
 export const popularGamesUrl = () => `${base_url}${popular_games}`;
 export const upcomingGamesUrl = () => `${base_url}${upcoming_games}`;
 export const newGamesUrl = () => `${base_url}${new_games}`;
+
+//Game Details
+export const gameDetailUrl = (gameId) => `${base_url}games/${gameId}`;
+
+//Game Screenshots
+export const gameScreenshotUrl = (gameId) =>
+  `${base_url}games/${gameId}/screenshots`;
