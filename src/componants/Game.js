@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 //styling and animation
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { popup } from "../animations";
 
 import { smallImage } from "../util";
 
@@ -17,7 +18,13 @@ function Game({ name, released, image, id }) {
   }
 
   return (
-    <StyledGame layoutId={id.toString()} onClick={() => loadDetailHandler(id)}>
+    <StyledGame
+      layoutId={id.toString()}
+      onClick={() => loadDetailHandler(id)}
+      variants={popup}
+      initial="hidden"
+      animate="show"
+    >
       <Link to={`/game/${id}`}>
         <motion.h3 layoutId={`title ${id}`}>{name}</motion.h3>
         <p>{released}</p>
