@@ -17,11 +17,15 @@ function Game({ name, released, image, id }) {
   }
 
   return (
-    <StyledGame onClick={() => loadDetailHandler(id)}>
+    <StyledGame layoutId={id.toString()} onClick={() => loadDetailHandler(id)}>
       <Link to={`/game/${id}`}>
-        <h3>{name}</h3>
+        <motion.h3 layoutId={`title ${id}`}>{name}</motion.h3>
         <p>{released}</p>
-        <img src={smallImage(image, 640)} alt={name} />
+        <motion.img
+          layoutId={`image ${id}`}
+          src={smallImage(image, 640)}
+          alt={name}
+        />
       </Link>
     </StyledGame>
   );
