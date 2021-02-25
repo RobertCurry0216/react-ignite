@@ -8,6 +8,17 @@ import { motion } from "framer-motion";
 
 import { smallImage } from "../util";
 
+//IMAGES
+import playstation from "../img/playstation.svg";
+import steam from "../img/steam.svg";
+import xbox from "../img/xbox.svg";
+import nintendo from "../img/nintendo.svg";
+import apple from "../img/apple.svg";
+import gamepad from "../img/gamepad.svg";
+//Star Images
+import starEmpty from "../img/star-empty.png";
+import starFull from "../img/star-full.png";
+
 function GameDetail({ pathId }) {
   const { screen, game, isLoading } = useSelector((state) => state.detail);
   const history = useHistory();
@@ -20,6 +31,36 @@ function GameDetail({ pathId }) {
     }
   }
 
+  function getPlatform(platform) {
+    switch (platform) {
+      case "PlayStation 4":
+        return playstation;
+      case "Xbox One":
+        return xbox;
+      case "PC":
+        return steam;
+      case "Nintendo Switch":
+        return nintendo;
+      case "iOS":
+        return apple;
+      default:
+        return gamepad;
+    }
+  }
+
+  function getStars(rating) {
+    const stars = [];
+    const flrRating = Math.floor(rating);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= flrRating) {
+        stars.push(<img alt="star" src={starFull} />);
+      } else {
+        stars.push(<img alt="no star" src={starEmpty} />);
+      }
+    }
+    return stars;
+  }
+
   return (
     <>
       {isLoading || (
@@ -28,13 +69,19 @@ function GameDetail({ pathId }) {
             <Stats>
               <div className="rating">
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
+                <div></div>
                 <p>Rating: {game.rating}</p>
+                {getStars(game.rating)}
               </div>
               <Info>
                 <h3>Platforms</h3>
                 <Platforms>
                   {game.platforms.map((data) => (
-                    <h3 key={data.platform.id}>{data.platform.name}</h3>
+                    <img
+                      alt={data.platform.name}
+                      key={data.platform.id}
+                      src={getPlatform(data.platform.name)}
+                    ></img>
                   ))}
                 </Platforms>
               </Info>
