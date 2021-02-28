@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/robertcurry0216.github.io/react-player/static/js/main.f12a10c7.chunk.js",
+    "main.js.map": "/robertcurry0216.github.io/react-player/static/js/main.f12a10c7.chunk.js.map",
+    "runtime-main.js": "/robertcurry0216.github.io/react-player/static/js/runtime-main.62924b7d.js",
+    "runtime-main.js.map": "/robertcurry0216.github.io/react-player/static/js/runtime-main.62924b7d.js.map",
+    "static/js/2.5d858e17.chunk.js": "/robertcurry0216.github.io/react-player/static/js/2.5d858e17.chunk.js",
+    "static/js/2.5d858e17.chunk.js.map": "/robertcurry0216.github.io/react-player/static/js/2.5d858e17.chunk.js.map",
+    "static/js/3.073ac87b.chunk.js": "/robertcurry0216.github.io/react-player/static/js/3.073ac87b.chunk.js",
+    "static/js/3.073ac87b.chunk.js.map": "/robertcurry0216.github.io/react-player/static/js/3.073ac87b.chunk.js.map",
+    "index.html": "/robertcurry0216.github.io/react-player/index.html",
+    "static/js/2.5d858e17.chunk.js.LICENSE.txt": "/robertcurry0216.github.io/react-player/static/js/2.5d858e17.chunk.js.LICENSE.txt",
+    "static/media/apple.5757c37e.svg": "/robertcurry0216.github.io/react-player/static/media/apple.5757c37e.svg",
+    "static/media/gamepad.c9269ef5.svg": "/robertcurry0216.github.io/react-player/static/media/gamepad.c9269ef5.svg",
+    "static/media/logo.9b6b8655.svg": "/robertcurry0216.github.io/react-player/static/media/logo.9b6b8655.svg",
+    "static/media/nintendo.f579be04.svg": "/robertcurry0216.github.io/react-player/static/media/nintendo.f579be04.svg",
+    "static/media/playstation.18cc4b9c.svg": "/robertcurry0216.github.io/react-player/static/media/playstation.18cc4b9c.svg",
+    "static/media/steam.d7b8819f.svg": "/robertcurry0216.github.io/react-player/static/media/steam.d7b8819f.svg",
+    "static/media/xbox.3e7db735.svg": "/robertcurry0216.github.io/react-player/static/media/xbox.3e7db735.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62924b7d.js",
+    "static/js/2.5d858e17.chunk.js",
+    "static/js/main.f12a10c7.chunk.js"
+  ]
+}
